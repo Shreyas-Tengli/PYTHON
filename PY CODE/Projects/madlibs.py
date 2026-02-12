@@ -1,0 +1,10 @@
+non=("its a name of plp animal")
+adjective=input("ADJECTIVE: ")
+place=input("place: ")
+noun=input(f"noun{non}: ")
+verb=input("Verb: ")
+
+print(f"Today i went to a {place}")
+print(f"there i saw {noun}")
+print(f"he was {adjective}")
+print(f"i was {verb}ing with {noun}")
