@@ -264,3 +264,95 @@ students.update({"prajwal":234})
 # for key,value in students.items():                   prints the key and value together
 #     print(f"{key}: {value}")
 
+'''           RANDOM          '''
+
+# import random
+# a=10
+# b=20
+# print(random.randint(1,6))
+# print(random.randint(a,b))
+# number=random.random()  prints a random no. btw 0 and 1
+# option=["Rock", "Paper", "Scissor"]
+# print(random.choice(option)) chose random no.
+# random.shuffle(option) shuffel the whole table
+# print(option)
+
+'''            FUNCTIONS             '''
+# def details(name,usn):
+#     user_name= name.capitalize() #capitalise for making first thing a captial .upper() for making whole line upper
+#     user_usn=usn
+#     return user_name + " " + user_usn
+
+# user_details=details("aanduu", "67")
+# print(user_details)
+# print(details("shreyas","212"))
+
+"Default Arguments"
+#It is the default value for ceratin parameters it is used when the argument is omited makes our function more flexible
+#1.positional 2.DEFAULT 3.keyword 4.arbitary
+
+# def net_price(price,discount=0,tax=0.01):
+#     return price*(1-discount)*(1+tax)
+
+# print(net_price(500))
+# print(net_price(500,0.1))
+
+# import time         #non default args shld be always after the defalut args
+# def stopwatch(end,start=0):
+#     for x in range(start,end+1):
+#         print(x)
+#         time.sleep(1)
+#     print("TIMES UP !!")
+# stopwatch(10)
+# stopwatch(30,15)
+
+"   Keyword args    "
+# an arg preseeded by an identifier helps with readablity order if argument doesnt matter
+# positional args shld be always at first
+
+# def hello(greeting, title, first, last):
+#     print(f"{greeting} {title}{first} {last}")
+
+# hello("Hello", title="Mr.", last="John", first="James")
+
+"   Arbitrary Arguments    "
+# 1. *args(arguments)  : allows us to pass multiple non key arguments ,packed in tuples   
+# 2.**kwargs(arguments): allows us to pass multiple keyword arguments ,packed in dictionaries
+# to invoke this we need to use *(unpacking oprator) 
+'args'
+# def add(*adds):
+#     total=0
+#     for add in adds:
+#         total+=add
+#     return total
+
+# print(add(1,2,3,4,5))
+'kwargs'
+# def address(**kwargs):
+#     for key,value in kwargs.items():
+#         print(f"{key}:{value}")
+# address(Street_Code=6429,Road="Nmit road",City="Bengaluru",State="KA",Country="INDIA")
+
+'example using args and kwargs'
+
+# def shipping_label(*args, **kwargs):
+#     for arg in args:
+#         print(arg, end=" ")
+#     print()
+
+#     if "apt" in kwargs:
+#         print(f"{kwargs.get('street')} {kwargs.get('apt')}")
+#     elif "pobox" in kwargs:
+#         print(f"{kwargs.get('street')}")
+#         print(f"{kwargs.get('pobox')}")
+#     else:
+#         print(f"{kwargs.get('street')}")
+
+#     print(f"{kwargs.get('city')}, {kwargs.get('state')} {kwargs.get('zip')}")
+
+# shipping_label("Dr.", "Spongebob", "Squarepants",
+#                street="Fake St.",
+#                pobox="585105",
+#                city="MAGLORE",
+#                state="KA",
+#                zip="54321")
